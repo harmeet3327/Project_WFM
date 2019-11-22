@@ -1,0 +1,16 @@
+package com.wfm.servicesimpl;
+
+import java.util.List;
+
+import com.wfm.models.ResourcesRoles;
+import com.wfm.services.ResourcesRoleService;
+
+public class ResourceRoleServiceImpl implements ResourcesRoleService {
+
+	@Override
+	public List<ResourcesRoles> getAllRoles() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1" isELIgnored="false"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<title>Welcome Employee</title>
+
+
+
+</head>
+<body>
+<h1 align="center">Company ${pObj.productCName} </h1>
+<hr/>
+
+<a href="Addproduct"   onclick="myFunction()" style="text-decoration:none;color:red;">Add product </a>
+<a href="list"   style="text-decoration:none;color:red;">List Of companies </a>
+</body>
+</html> 

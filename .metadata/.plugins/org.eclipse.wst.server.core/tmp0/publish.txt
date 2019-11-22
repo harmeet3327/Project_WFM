@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Fri Nov 22 17:57:38 IST 2019
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\harmeet.singh\\.m2\\repository\\org\\springframework\\spring-web\\5.1.5.RELEASE\\spring-web-5.1.5.RELEASE.jar=WEB-INF/lib/spring-web-5.1.5.RELEASE.jar
+org.eclipse.jst.j2ee.server\:workforcemanagement-backend=WEB-INF/lib/workforcemanagement-backend-0.0.1-SNAPSHOT.jar

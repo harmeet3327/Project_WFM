@@ -1,0 +1,39 @@
+package com.wfm.test;
+
+import static org.junit.Assert.assertTrue;
+
+import java.util.List;
+
+import org.junit.BeforeClass;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.wfm.dao.ResourseDao;
+import com.wfm.dbconfig.DBConfig;
+import com.wfm.models.ResourcesDetail;
+
+import org.junit.Assert;
+
+public class ResourseUTest {
+	
+	private static ResourseDao resDao ;
+	
+	@BeforeClass
+	public static void init(){
+		
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(DBConfig.class);
+		
+		resDao=context.getBean(ResourseDao.class);
+   	 	
+	}
+
+	@Test
+	public void getAllProductsTest(){
+		List<ResourcesDetail> rList=resDao.getAllResources();
+		System.out.println(rList);
+		Assert.assertNotEquals("Not Resources Found...", rList.size(),0);
+	}
+	
+
+}

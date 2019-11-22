@@ -1,0 +1,5 @@
+package com.wfm.services;
+
+public interface ProjectService {
+
+}

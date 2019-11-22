@@ -1,0 +1,55 @@
+<%@taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<html>
+	<head>
+		<title>Product SignUp</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src=""${pageContext.request.contextPath}/resources/js/Firstjs.js" ></script>   
+	</head>
+	<body>
+		<h1 style="text-align: center;font-family: verdana;color: green">
+		
+		</h1>
+		
+		<hr/>
+		
+		<div align="center">
+			<h1>productName</h1>
+			
+			
+			
+			<f:form action="registerProduct" method="post" modelAttribute="pObj">
+			<table>
+				
+				<tr>
+					<td>Product Company Name : </td>
+					<td><f:input path="productCName"/></td>
+					
+				</tr>
+				
+				
+				<tr>
+					<td>Passward : </td>
+					<td><f:input  path="passward"/></td>
+				</tr>
+				
+				
+				
+				
+					
+				<tr>
+					
+					<td>
+						<input type="submit" value="signUp" id="sub"/>
+					</td>
+				</tr>
+			</table>
+			</f:form>
+	<script type="text/javascript">
+		
+	</script>
+	
+		</div>
+		
+	</body>
+</html>

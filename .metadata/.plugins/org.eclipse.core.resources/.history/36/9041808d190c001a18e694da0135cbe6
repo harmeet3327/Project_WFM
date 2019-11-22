@@ -1,0 +1,20 @@
+package com.wfm.models;
+
+public class ResourceRole {
+	private Integer roleId;
+	private String roleType;
+	
+	public Integer getRoleId() {
+		return roleId;
+	}
+	public String getRoleType() {
+		return roleType;
+	}
+	@Override
+	public String toString() {
+		return "ResourceRole [roleId=" + roleId + ", roleType=" + roleType + "]";
+	}
+	
+	
+
+}

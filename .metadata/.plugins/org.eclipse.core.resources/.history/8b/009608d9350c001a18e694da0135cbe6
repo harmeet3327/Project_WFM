@@ -1,0 +1,10 @@
+package com.wfm.dao;
+
+import java.util.List;
+
+import com.wfm.models.ResourceRoles;
+
+public interface ResourceRoleDao {
+
+	public List<ResourceRoles> getAllRoles();
+}

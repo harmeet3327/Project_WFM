@@ -1,0 +1,22 @@
+package com.wfm.test;
+
+import org.junit.BeforeClass;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.wfm.dao.ResourseDao;
+import com.wfm.dbconfig.DBConfig;
+
+public class ProjectsUTest {
+	
+private static ResourseDao resDao ;
+	
+	@BeforeClass
+	public static void init(){
+		
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(DBConfig.class);
+		
+		resDao=context.getBean(ProjectsDao.class);
+   	 	
+	}
+
+}

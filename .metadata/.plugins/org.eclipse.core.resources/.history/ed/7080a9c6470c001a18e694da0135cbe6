@@ -1,0 +1,58 @@
+package com.wfm.controllers;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.wfm.dao.ResourseDao;
+import com.wfm.models.ResourcesDetail;
+
+
+
+@Controller
+public class FrontController {
+	
+	@Autowired ResourseDao resDao;
+	
+	@RequestMapping(value="/",method=RequestMethod.GET)
+	
+	public String hello(ModelMap map)
+	
+	{
+		map.addAttribute("msg","Welcome To MVC User");
+		
+		return "Home";
+	}
+
+
+@RequestMapping(value="/signin",method=RequestMethod.GET)
+
+public String signInForm()
+
+{
+	return "SignIn";
+
+
+}
+
+
+@RequestMapping(value="/login",method=RequestMethod.POST)
+public String loginProductCom(@RequestParam int productId,@RequestParam String passward){
+	
+	ResourcesDetail ps=resDao.validateResource(productId,passward);
+	
+if(ps!=null){
+		
+		session.setAttribute("pObj",ps);
+		
+		return "WelcomeAdmin";
+		}
+	
+		return "SignIn";
+	}
+	
+}

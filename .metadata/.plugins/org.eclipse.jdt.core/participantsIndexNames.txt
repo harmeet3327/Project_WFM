@@ -1,0 +1,7 @@
+INDEX VERSION 1.130
+D:\IrisProject\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4217079630.index
+\workforcemanagement-frontend\src\main\resources
+D:\IrisProject\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\858174376.index
+\workforcemanagement-frontend\src\main\java
+D:\IrisProject\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2618507737.index
+\workforcemanagement-frontend\src\main\resources

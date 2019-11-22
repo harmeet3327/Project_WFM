@@ -1,0 +1,5 @@
+package com.wfm.dao;
+
+public interface RequestAssignmentDao {
+
+}

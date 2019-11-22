@@ -1,0 +1,23 @@
+package com.wfm.test;
+
+import org.junit.BeforeClass;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.wfm.dao.ProjectsDao;
+import com.wfm.dbconfig.DBConfig;
+import com.wfm.models.Projects;
+
+public class ProjectsUTest {
+	
+private static Projects projDao ;
+	
+	@BeforeClass
+	public static void init(){
+		
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(DBConfig.class);
+		
+		projDao=(Projects) context.getBean(ProjectsDao.class);
+   	 	
+	}
+
+}

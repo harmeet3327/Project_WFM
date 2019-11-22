@@ -1,0 +1,16 @@
+package com.wfm.servicesimpl;
+
+import java.util.List;
+
+import com.wfm.models.Projects;
+import com.wfm.services.ProjectService;
+
+public class ProjectServiceImpl implements ProjectService {
+
+	@Override
+	public List<Projects> getAllProjects() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

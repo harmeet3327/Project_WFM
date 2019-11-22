@@ -1,0 +1,41 @@
+package com.wfm.servicesimpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.wfm.dao.ResourceDao;
+import com.wfm.models.ResourcesDetail;
+import com.wfm.services.ResourceService;
+
+@Service("resService")
+public class ResourceServiceImpl implements ResourceService {
+
+	@Autowired ResourceDao resDao;
+	
+	public boolean addResourse(ResourcesDetail rdObj) {
+	
+		return false;
+	}
+
+	public List<ResourcesDetail> getAllResources() {
+		
+		
+		return null;
+	}
+
+
+	public ResourcesDetail validateResource(int rId, String rPassward) {
+	
+		
+		return resDao.validateResource(rId, rPassward);
+	}
+
+
+	public ResourcesDetail getResourceById(int rId) {
+		
+		return null;
+	}
+
+}

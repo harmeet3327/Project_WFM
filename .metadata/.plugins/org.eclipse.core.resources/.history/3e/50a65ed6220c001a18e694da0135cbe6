@@ -1,0 +1,14 @@
+package com.wfm.resoursedaoimpl;
+
+import com.wfm.models.ResourcesDetail;
+import com.wfm.resoursedao.ResourseDao;
+
+public class ResourseDaoImpl implements ResourseDao {
+
+	@Override
+	public boolean addResourse(ResourcesDetail rdObj) {
+		
+		return false;
+	}
+
+}

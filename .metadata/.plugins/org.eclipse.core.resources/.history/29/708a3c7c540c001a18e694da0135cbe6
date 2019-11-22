@@ -1,0 +1,70 @@
+package com.wfm.controllers;
+
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.wfm.dao.ResourceDao;
+import com.wfm.models.ResourcesDetail;
+import com.wfm.services.ResourceService;
+
+
+
+@Controller
+public class FrontController {
+	
+	@Autowired ResourceService resService;
+	
+	@RequestMapping(value="/",method=RequestMethod.GET)
+	
+	public String hello(ModelMap map)
+	
+	{
+		map.addAttribute("msg","Welcome To MVC User");
+		
+		return "Home";
+	}
+
+
+@RequestMapping(value="/signin",method=RequestMethod.GET)
+
+public String signInForm()
+
+{
+	return "SignIn";
+
+
+}
+@Autowired HttpSession session;
+
+@RequestMapping(value="/login",method=RequestMethod.POST)
+public String loginResource(@RequestParam int rId,@RequestParam String rPassward){
+	
+	ResourcesDetail rObj=resService.validateResource(rId,rPassward);
+	
+	
+	if(rObj!=null )
+		session.setAttribute("rObj", rObj);
+		if(rObj.getRoleId().getRoleType().equalsIgnoreCase("MANAGER"))
+		{
+		
+		return "WelcomeManager";
+		}
+		if(rObj.getRoleId().getRoleType().equalsIgnoreCase("ADMIN"))
+		{
+		return "WelcomeAdmin";
+		}
+		else
+		{
+		return "WelcomeEmployee";
+		}
+	return "SignIn";
+	}
+	
+}

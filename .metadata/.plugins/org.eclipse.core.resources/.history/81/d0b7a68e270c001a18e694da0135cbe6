@@ -1,0 +1,169 @@
+package com.wfm.models;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+@SequenceGenerator(name="resIdSeq", initialValue=418,allocationSize=1000)
+@Table(name="RESOURSE_DETAILS")
+public class ResourcesDetail {
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.SEQUENCE,generator="resIdSeq")
+	@Column(name="RESOURSE_ID")
+	
+	private Integer rId;
+	
+	@Column(name="RESOURSE_NAME")
+	private String rName;
+	
+	@OneToOne
+	@JoinColumn(name="RESOURSE_ROLE_ID")
+	private ResourceRole RoleId;
+	
+	@Column(name="RESOURSE_EXERIENCE")
+	private Integer rExperience;
+	
+	@Column(name="RESOURSE_PASSWORD")
+	private	String rPassward;
+	
+	@Column(name="RESOURSE_EMAIL")
+	private String rEmail;
+	
+	@Column(name="RESOURSE_DOB")
+	private Date rDOB;
+	
+	@Column(name="RESOURSE_GENDER")
+	private String rGender;
+	
+	@Column(name="RESOURSE_MARITAL_STATUS")
+	private String rMaritalStatus;
+	
+	@Column(name="RESOURSE_PHONE_NUMBER")
+	private Integer rPhoneNumber;
+	
+	@Column(name="RESOURSE_SKILLS")
+	private String rSkills;
+	
+	@Column(name="RESOURSE_STATUS")
+	private String rStatus;
+	
+	@OneToOne
+	@JoinColumn(name="RESOURSE_PROJECT_ID")
+	private Projects rProjectId;
+	
+	@Column(name="RESOURSE_START_DATE")
+	private Date rProStartDate;
+	
+	@Column(name="RESOURSE_END_DATE")
+	private Date rProEndDate;
+	
+	public Integer getrId() {
+		return rId;
+	}
+	public void setrId(Integer rId) {
+		this.rId = rId;
+	}
+	public String getrName() {
+		return rName;
+	}
+	public void setrName(String rName) {
+		this.rName = rName;
+	}
+	public Integer getrRoleId() {
+		return rRoleId;
+	}
+	public void setrRoleId(Integer rRoleId) {
+		this.rRoleId = rRoleId;
+	}
+	public Integer getrExperience() {
+		return rExperience;
+	}
+	public void setrExperience(Integer rExperience) {
+		this.rExperience = rExperience;
+	}
+	public String getrPassward() {
+		return rPassward;
+	}
+	public void setrPassward(String rPassward) {
+		this.rPassward = rPassward;
+	}
+	public String getrEmail() {
+		return rEmail;
+	}
+	public void setrEmail(String rEmail) {
+		this.rEmail = rEmail;
+	}
+	public Date getrDOB() {
+		return rDOB;
+	}
+	public void setrDOB(Date rDOB) {
+		this.rDOB = rDOB;
+	}
+	public String getrGender() {
+		return rGender;
+	}
+	public void setrGender(String rGender) {
+		this.rGender = rGender;
+	}
+	public String getrMaritalStatus() {
+		return rMaritalStatus;
+	}
+	public void setrMaritalStatus(String rMaritalStatus) {
+		this.rMaritalStatus = rMaritalStatus;
+	}
+	public Integer getrPhoneNumber() {
+		return rPhoneNumber;
+	}
+	public void setrPhoneNumber(Integer rPhoneNumber) {
+		this.rPhoneNumber = rPhoneNumber;
+	}
+	public String getrSkills() {
+		return rSkills;
+	}
+	public void setrSkills(String rSkills) {
+		this.rSkills = rSkills;
+	}
+	public String getrStatus() {
+		return rStatus;
+	}
+	public void setrStatus(String rStatus) {
+		this.rStatus = rStatus;
+	}
+	public Integer getrProjectId() {
+		return rProjectId;
+	}
+	public void setrProjectId(Integer rProjectId) {
+		this.rProjectId = rProjectId;
+	}
+	public Date getrProStartDate() {
+		return rProStartDate;
+	}
+	public void setrProStartDate(Date rProStartDate) {
+		this.rProStartDate = rProStartDate;
+	}
+	public Date getrProEndDate() {
+		return rProEndDate;
+	}
+	public void setrProEndDate(Date rProEndDate) {
+		this.rProEndDate = rProEndDate;
+	}
+	@Override
+	public String toString() {
+		return "ResourcesDetail [rId=" + rId + ", rName=" + rName + ", rRoleId=" + rRoleId + ", rExperience="
+				+ rExperience + ", rPassward=" + rPassward + ", rEmail=" + rEmail + ", rDOB=" + rDOB + ", rGender="
+				+ rGender + ", rMaritalStatus=" + rMaritalStatus + ", rPhoneNumber=" + rPhoneNumber + ", rSkills="
+				+ rSkills + ", rStatus=" + rStatus + ", rProjectId=" + rProjectId + ", rProStartDate=" + rProStartDate
+				+ ", rProEndDate=" + rProEndDate + "]";
+	}
+	
+}

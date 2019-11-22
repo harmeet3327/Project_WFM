@@ -1,0 +1,15 @@
+package com.wfm.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.wfm.dao.RequestAssignmentDao;
+import com.wfm.services.RequestAssignmentDaoService;
+
+@Controller
+public class ManagerController {
+	
+@Autowired RequestAssignmentDaoService reqService;
+
+
+}

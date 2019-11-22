@@ -1,0 +1,16 @@
+package com.wfm.daoimpl;
+
+import java.util.List;
+
+import com.wfm.dao.ResourceRoleDao;
+import com.wfm.models.ResourceRole;
+
+public class ResourceDaoImpl implements ResourceRoleDao {
+
+	@Override
+	public List<ResourceRole> getAllRoles() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

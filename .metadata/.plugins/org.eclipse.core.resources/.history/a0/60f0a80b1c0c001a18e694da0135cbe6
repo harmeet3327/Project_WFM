@@ -1,0 +1,80 @@
+package com.wfm.models;
+
+import java.util.Date;
+
+public class ResAssignmentReq {
+	
+	private Integer reqId;
+	private Integer projectId;
+	private Integer roleId;
+	private Integer reqRequiredExp;
+	private String reqSkills;
+	private Date reqProjStartDate;
+	private Date reqProjEndDate;
+	private String reqRemarks;
+	private String reqFlag;
+	public Integer getReqId() {
+		return reqId;
+	}
+	public void setReqId(Integer reqId) {
+		this.reqId = reqId;
+	}
+	public Integer getProjectId() {
+		return projectId;
+	}
+	public void setProjectId(Integer projectId) {
+		this.projectId = projectId;
+	}
+	public Integer getRoleId() {
+		return roleId;
+	}
+	public void setRoleId(Integer roleId) {
+		this.roleId = roleId;
+	}
+	public Integer getReqRequiredExp() {
+		return reqRequiredExp;
+	}
+	public void setReqRequiredExp(Integer reqRequiredExp) {
+		this.reqRequiredExp = reqRequiredExp;
+	}
+	public String getReqSkills() {
+		return reqSkills;
+	}
+	public void setReqSkills(String reqSkills) {
+		this.reqSkills = reqSkills;
+	}
+	public Date getReqProjStartDate() {
+		return reqProjStartDate;
+	}
+	public void setReqProjStartDate(Date reqProjStartDate) {
+		this.reqProjStartDate = reqProjStartDate;
+	}
+	public Date getReqProjEndDate() {
+		return reqProjEndDate;
+	}
+	public void setReqProjEndDate(Date reqProjEndDate) {
+		this.reqProjEndDate = reqProjEndDate;
+	}
+	public String getReqRemarks() {
+		return reqRemarks;
+	}
+	public void setReqRemarks(String reqRemarks) {
+		this.reqRemarks = reqRemarks;
+	}
+	public String getReqFlag() {
+		return reqFlag;
+	}
+	public void setReqFlag(String reqFlag) {
+		this.reqFlag = reqFlag;
+	}
+	@Override
+	public String toString() {
+		return "ResAssignmentReq [reqId=" + reqId + ", projectId=" + projectId + ", roleId=" + roleId
+				+ ", reqRequiredExp=" + reqRequiredExp + ", reqSkills=" + reqSkills + ", reqProjStartDate="
+				+ reqProjStartDate + ", reqProjEndDate=" + reqProjEndDate + ", reqRemarks=" + reqRemarks + ", reqFlag="
+				+ reqFlag + "]";
+	}
+	
+	
+
+}

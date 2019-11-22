@@ -1,0 +1,8 @@
+$(document).ready(function()
+		{
+	$("#add").click
+	var =confirm("Are you sure u want id Signup")
+	
+}		
+)
+	

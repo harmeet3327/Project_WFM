@@ -1,0 +1,22 @@
+package com.wfm.daoimpl;
+
+import java.util.List;
+
+import com.wfm.dao.RequestAssignmentDao;
+import com.wfm.models.ResAssignmentReq;
+
+public class RequestAssignmentDaoImpl implements RequestAssignmentDao {
+
+	@Override
+	public boolean raiseRequest(ResAssignmentReq rqObj) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public List<ResAssignmentReq> getAllRequest() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

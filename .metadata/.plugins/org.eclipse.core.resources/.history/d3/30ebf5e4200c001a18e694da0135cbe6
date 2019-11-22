@@ -1,0 +1,7 @@
+package com.wfm.resoursedaoimpl;
+
+import com.wfm.resoursedao.ResourseDao;
+
+public class ResourseDaoImpl implements ResourseDao {
+
+}

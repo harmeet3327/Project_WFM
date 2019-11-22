@@ -1,0 +1,64 @@
+package com.wfm.servicesimpl;
+
+import java.time.LocalDate;
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.wfm.dao.ProjectsDao;
+import com.wfm.dao.ResourceDao;
+import com.wfm.dao.ResourceRoleDao;
+import com.wfm.models.Projects;
+import com.wfm.models.ResourcesDetail;
+import com.wfm.models.ResourcesRoles;
+import com.wfm.services.ResourceService;
+
+@Service("resService")
+@Transactional
+public class ResourceServiceImpl implements ResourceService {
+
+	@Autowired ResourceDao resDao;
+	@Autowired ProjectsDao projDao;
+	@Autowired ResourceRoleDao roleDao;
+	public boolean addResourse(ResourcesDetail rdObj) {
+		
+		
+		ResourcesRoles rlObj=roleDao.getRoleById(rdObj.getRoleId());
+		Projects pr=new Projects();
+		pr=projDao.getProjectById(300);
+		pr.getProjectName();
+		Date d1=pr.getProjectStartDate();
+		Date d2=pr.getProjectEndDate();
+		pr.getProjectEndDate();
+		rdObj.setProject(pr);
+		rdObj.setrProStartDate(d1);
+		rdObj.setrProEndDate(d2);
+		resDao.addResourse(rdObj);
+		return false;
+	}
+
+	public List<ResourcesDetail> getAllResources() {
+		
+		
+		return resDao.getAllResources();
+	}
+
+
+	public ResourcesDetail validateResource(int rId, String rPassward) {
+	
+		System.out.println("in service");
+		ResourcesDetail rObj=resDao.validateResource(rId, rPassward);
+		
+		return rObj;
+	}
+
+
+	public ResourcesDetail getResourceById(int rId) {
+		
+		return resDao.getResourceById(rId);
+	}
+
+}

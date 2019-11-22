@@ -1,0 +1,9 @@
+package com.wfm.test;
+
+import com.wfm.resoursedao.ResourseDao;
+
+public class ResourseUTest {
+	
+	private static ResourseDao resDao ;
+
+}

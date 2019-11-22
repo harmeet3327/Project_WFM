@@ -1,0 +1,8 @@
+package com.wfm.resoursedao;
+
+import com.wfm.models.ResourcesDetail;
+
+public interface ResourseDao {
+	
+	public boolean addResourse(ResourcesDetail rdObj);
+}

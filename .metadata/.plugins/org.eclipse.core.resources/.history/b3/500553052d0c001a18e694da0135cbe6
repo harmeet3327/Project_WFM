@@ -1,0 +1,47 @@
+package com.wfm.resoursedaoimpl;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.wfm.models.ResourcesDetail;
+import com.wfm.resoursedao.ResourseDao;
+
+@Repository("resDao")
+@Transactional
+public class ResourseDaoImpl implements ResourseDao {
+
+	@Autowired
+	private SessionFactory sessionFactory;
+	@Override
+	public boolean addResourse(ResourcesDetail rdObj) {
+		try {
+			Session session=sessionFactory.getCurrentSession();
+			session.persist(rdObj);
+			return true;
+			}
+			catch(Exception e){
+				e.printStackTrace();
+			}
+			return false;
+	}
+	@Override
+	public List<ResourcesDetail> getAllResources() {
+		try {
+			Session session=sessionFactory.getCurrentSession();
+			Query query=session.createQuery("from com.wfm.models.ResourcesDetail");
+			return query.list();
+			}
+			catch(Exception e){
+				e.printStackTrace();
+			}
+			
+		return null;
+	}
+
+}

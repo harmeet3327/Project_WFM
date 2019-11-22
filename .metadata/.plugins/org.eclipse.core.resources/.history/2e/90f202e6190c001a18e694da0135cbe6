@@ -1,0 +1,21 @@
+package com.wfm.models;
+
+public class Skills {
+	
+	private Integer skillId;
+	private String skillName;
+	
+	public Integer getSkillId() {
+		return skillId;
+	}
+	public String getSkillName() {
+		return skillName;
+	}
+	@Override
+	public String toString() {
+		return "Skills [skillId=" + skillId + ", skillName=" + skillName + "]";
+	}
+	
+	
+
+}

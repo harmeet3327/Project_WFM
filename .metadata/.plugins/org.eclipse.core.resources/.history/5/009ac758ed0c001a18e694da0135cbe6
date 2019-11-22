@@ -1,0 +1,70 @@
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1" isELIgnored="false"%>
+    <%@taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<f:form action="addRes" method="post" modelAttribute="pObj">
+			<table>
+				<tr>
+					<td> Name : </td>
+					<td><f:input path="rName"/></td>
+				</tr>
+					<tr>
+					<td>Experience : </td>
+					<td><f:input path="rExperience"/></td>
+					</tr>
+				<tr>
+					<td> Role : </td>
+					<td>
+					<select>
+							<c:forEach items="${rlist}" var="rlist">
+								<option value="${rlist.roleId}"> -------- ${rlist.roleType}</option>
+							</c:forEach>
+					</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Password : </td>
+					<td><f:input path="rPassward" value="T123" readable placeholder="T123"/></td>
+				</tr>
+				<tr>
+					<td>Email : </td>
+					<td><f:input path="rEmail"/></td>
+				</tr>
+				<tr>
+					<td>Date of Birth  : </td>
+					<td><f:input type="date" path="rDOB"/></td>
+				</tr>
+					<tr>
+					<td>Select Gender  : </td>
+					<td><f:radiobutton  path="rGender" value="male"/></td>
+					<td><f:radiobutton  path="rGender" value="female"/></td>
+					<td><f:radiobutton  path="rGender" value="Other"/></td>
+				</tr>
+					<tr>
+					<td>Phone no : </td>
+					<td><f:input type="number"path="rPhoneNumber"/></td>
+				</tr>
+					<tr>
+					<td>Skills : </td>
+					<td>
+					<select>
+							<c:forEach items="${slist}" var="slist">
+								<option value="${slist.skillName}"> -------- ${slist.skillName}</option>
+							</c:forEach>
+					</select>
+					</td>
+				</tr>
+				
+				
+		</table>
+		</f:form>
+</body>
+</html>

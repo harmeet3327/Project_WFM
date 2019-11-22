@@ -1,0 +1,13 @@
+package com.wfm.models;
+
+import java.util.Date;
+
+public class Projects {
+	
+	private Integer projectId;
+	private String projectName;
+	private Date projectStartDate; 
+	private  Date projectEndDate;
+	
+
+}

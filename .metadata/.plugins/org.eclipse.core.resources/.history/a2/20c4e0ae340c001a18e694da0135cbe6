@@ -1,0 +1,22 @@
+package com.wfm.daoimpl;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.wfm.dao.ResourceRoleDao;
+import com.wfm.models.ResourceRole;
+
+
+@Repository("roleDao")
+@Transactional
+public class ResourceRoleDaoImpl implements ResourceRoleDao {
+
+
+	public List<ResourceRole> getAllRoles() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ResourceUTest" project="workforcemanagement-backend" tests="2" started="2" failures="0" errors="0" ignored="1">
+  <testsuite name="com.wfm.test.ResourceUTest" time="0.093">
+    <testcase name="validateUserUTest" classname="com.wfm.test.ResourceUTest" time="0.093"/>
+    <testcase name="getAllResourcesTest" classname="com.wfm.test.ResourceUTest" time="0.0" ignored="true"/>
+  </testsuite>
+</testrun>

@@ -1,0 +1,34 @@
+package com.wfm.servicesimpl;
+
+import java.util.List;
+
+import com.wfm.models.ResourcesDetail;
+import com.wfm.services.ResourceService;
+
+public class ResourceServiceImpl implements ResourceService {
+
+	@Override
+	public boolean addResourse(ResourcesDetail rdObj) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public List<ResourcesDetail> getAllResources() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ResourcesDetail validateResource(int rId, String rPassward) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ResourcesDetail getResourceById(int rId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
